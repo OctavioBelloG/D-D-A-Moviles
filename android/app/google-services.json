@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "233542072050",
+    "project_id": "desarrollo-movil-taviz",
+    "storage_bucket": "desarrollo-movil-taviz.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233542072050:android:5f0fcc7ca45ba80ea4026b",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8cNGJA8JCH9DdnUrZMZ6Fp3Q2Lp6IL0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
