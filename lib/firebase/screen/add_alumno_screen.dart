@@ -2,19 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/firebase/models/alumno.dart';
 import 'package:flutter_application_1/firebase/services/alumno_service.dart';
 
+
 class AddAlumnoScreen extends StatefulWidget {
   const AddAlumnoScreen({super.key});
 
   @override
   State<AddAlumnoScreen> createState() => _AddAlumnoScreen();
 }
-
 class _AddAlumnoScreen extends State<AddAlumnoScreen> {
-  
   @override
   Widget build(BuildContext context) {
     TextEditingController txtNombre = TextEditingController();
     TextEditingController txtNoControl = TextEditingController();
+    //procesar datos dentro de la pantalla
+    // final Alumno alumno = ModalRoute.of(context)!
+    //                       .settings.arguments as Alumno;
+    // txtNombre.text = alumno.nombre;
+    // txtNoControl.text = alumno.nocontrol;
     final formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(title: Text("Agregar Alumno"),),
@@ -85,8 +89,9 @@ class _AddAlumnoScreen extends State<AddAlumnoScreen> {
                       );
                       int code = await AddAlumno(a);
                     // Navigator.pop(context);//cuadro de dialogo
-                    Navigator.of(context).pushNamedAndRemoveUntil(
-                      '/', (route) => false);
+                    Navigator.of(
+                      context,
+                    ).pushNamedAndRemoveUntil('/', (route) => false);
                     }
                   },
                   icon: Icon(Icons.airplay_rounded),

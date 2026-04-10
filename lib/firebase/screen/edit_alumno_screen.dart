@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/clase_310146/listviewbuilder_widget.dart';
+import 'package:flutter_application_1/firebase/models/alumno.dart';
 import 'package:flutter_application_1/firebase/services/alumno_service.dart';
 //importM+tab
 //statelesW+tab
@@ -9,7 +9,6 @@ class EditAlumnoScreen extends StatefulWidget {
   @override
   State<EditAlumnoScreen> createState() => _EditAlumnoScreenState();
 }
-
 class _EditAlumnoScreenState extends State<EditAlumnoScreen> {
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class _EditAlumnoScreenState extends State<EditAlumnoScreen> {
     final Alumno alumno = ModalRoute.of(context)!
                           .settings.arguments as Alumno;
     txtNombre.text = alumno.nombre;
-    txtNoControl.text = alumno.carrera;//PORUQE DICE CARRERA???????????????????????????????????????????????????????????????????????????
+    txtNoControl.text = alumno.nocontrol;//PORUQE DICE CARRERA???????????????????????????????????????????????????????????????????????????
     final formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(title: Text("Actualizar Alumno"),),
@@ -88,7 +87,7 @@ class _EditAlumnoScreenState extends State<EditAlumnoScreen> {
                     if(formKey.currentState!.validate()){
                       Alumno a = Alumno(
                         id: alumno.id,
-                        carrera: txtNoControl.value.text,
+                        nocontrol: txtNoControl.value.text,
                         nombre: txtNombre.value.text,
                       );
                       int code = await editAlumno(a);

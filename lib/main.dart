@@ -58,12 +58,13 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false, //elimina la etiqueta de debug en la esquina de la aplicacion
         //home:  BancoScreen()//pantalla principal de la aplicacion
         //RUTAS DE NAVEGACION
-        initialRoute: '/Banco',
+        initialRoute: '/',
+        ////initialRoute: '/Banco',
         routes:{//espesificar como son las rutas AQUI!
           // '/': (context) => BancoScreen(),
           // '/retiro': (_) => RetiroScreen()       
           '/': (_) => ListAlumnosScreen(),
-          'addAlumnoScreen': (_) => AddAlumnoScreen(),
+          '/addAlumno': (_) => AddAlumnoScreen(),
           '/editAlumno': (_) => EditAlumnoScreen(),
           '/deleteAlumno': (_) => DeleteAlumnoScreen(),
         },

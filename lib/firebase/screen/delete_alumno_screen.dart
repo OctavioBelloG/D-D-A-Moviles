@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/clase_310146/listviewbuilder_widget.dart';
+import 'package:flutter_application_1/firebase/models/alumno.dart';
 import 'package:flutter_application_1/firebase/services/alumno_service.dart';
 
 class DeleteAlumnoScreen extends StatelessWidget {

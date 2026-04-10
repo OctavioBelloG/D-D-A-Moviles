@@ -1,5 +1,4 @@
-
-
+//almno service
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../models/alumno.dart';
@@ -56,6 +55,7 @@ Future<int> deleteAlumno(String id) async{
   int code = 0;
   try {
     await coleccion.doc(id).delete();
+    code = 200;
   } catch (e) {
     code = 500;
   }
