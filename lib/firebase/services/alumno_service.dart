@@ -1,5 +1,6 @@
 //almno service
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_application_1/firebase/models/foto.dart';
 
 import '../models/alumno.dart';
 
@@ -55,6 +56,18 @@ Future<int> deleteAlumno(String id) async{
   int code = 0;
   try {
     await coleccion.doc(id).delete();
+    code = 200;
+  } catch (e) {
+    code = 500;
+  }
+  return code;
+}
+
+Future<int> AddFoto (Foto f) async {
+  CollectionReference collection = db.collection('Fotografias');
+  int code = 0;
+  try{
+    await collection.add(f.toJson());
     code = 200;
   } catch (e) {
     code = 500;
