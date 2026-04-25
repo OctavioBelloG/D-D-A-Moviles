@@ -12,7 +12,7 @@ Future<ResponseAuth> Login(String email, String pdw) async {
     auth.signInWithEmailAndPassword
     (email: email, password: pdw);
     return ResponseAuth(codigo: 200, mensaje: "Autenticación exitosa");
-                                       
+
   } on FirebaseAuthException catch (e){
     if(e.code == 'user-not-fount'||e.code == 'Wrong-password'){
       return ResponseAuth(
@@ -23,4 +23,5 @@ Future<ResponseAuth> Login(String email, String pdw) async {
         mensaje: "Error desconocido, intente de nuevo", codigo: 500);
     }
   };
+
 }

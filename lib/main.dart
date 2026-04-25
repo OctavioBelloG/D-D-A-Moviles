@@ -9,6 +9,7 @@ import 'package:flutter_application_1/firebase/screen/delete_alumno_screen.dart'
 import 'package:flutter_application_1/firebase/screen/edit_alumno_screen.dart';
 import 'package:flutter_application_1/firebase/screen/list_alumnos_screen.dart';
 import 'package:flutter_application_1/firebase/screen/login_screen.dart';
+import 'package:flutter_application_1/firebase/screen/upload_image_screen.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
@@ -67,7 +68,8 @@ class MyApp extends StatelessWidget {
           // '/': (context) => BancoScreen(),
           // '/retiro': (_) => RetiroScreen()       
           //'/': (_) => ListAlumnosScreen(),
-            '/': (_) => LoginScreen(),
+            //'/': (_) => LoginScreen(),
+            '/': (_) => UploadImageScreen(),
             '/listAlumnos': (_) => ListAlumnosScreen(),
 
           '/addAlumno': (_) => AddAlumnoScreen(),
