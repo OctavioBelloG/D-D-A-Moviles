@@ -8,8 +8,10 @@ import 'package:flutter_application_1/firebase/screen/add_alumno_screen.dart';
 import 'package:flutter_application_1/firebase/screen/delete_alumno_screen.dart';
 import 'package:flutter_application_1/firebase/screen/edit_alumno_screen.dart';
 import 'package:flutter_application_1/firebase/screen/list_alumnos_screen.dart';
+import 'package:flutter_application_1/firebase/screen/login_screen.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
 import 'Unidad_1/columnas.dart';
 import 'Unidad_1/filas.dart';
@@ -58,12 +60,16 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false, //elimina la etiqueta de debug en la esquina de la aplicacion
         //home:  BancoScreen()//pantalla principal de la aplicacion
         //RUTAS DE NAVEGACION
+        builder: FlutterSmartDialog.init(),
         initialRoute: '/',
         ////initialRoute: '/Banco',
         routes:{//espesificar como son las rutas AQUI!
           // '/': (context) => BancoScreen(),
           // '/retiro': (_) => RetiroScreen()       
-          '/': (_) => ListAlumnosScreen(),
+          //'/': (_) => ListAlumnosScreen(),
+            '/': (_) => LoginScreen(),
+            '/listAlumnos': (_) => ListAlumnosScreen(),
+
           '/addAlumno': (_) => AddAlumnoScreen(),
           '/editAlumno': (_) => EditAlumnoScreen(),
           '/deleteAlumno': (_) => DeleteAlumnoScreen(),
