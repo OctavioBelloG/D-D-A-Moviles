@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/firebase/models/foto.dart';
+import 'package:flutter_application_1/firebase/services/alumno_service.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
 
@@ -63,7 +65,9 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
                     });
                       final snapshot = await uploadTask;
                       final url = await snapshot.ref.getDownloadURL();
-                      print(url);
+                      //print(url);
+                      Foto f = Foto(url: url);
+                      await AddFoto(f);
                   },
 
                   child: const Text("Subir imagen",
